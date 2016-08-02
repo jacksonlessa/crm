@@ -14,3 +14,9 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+/web/assets/vendor/
+
+# ECLIPSE Files
+.settings/
+.buildpath
+.project

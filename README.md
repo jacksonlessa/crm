@@ -1,56 +1,41 @@
-Symfony Standard Edition
+CMR
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+Descrição
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
-
-What's inside?
+O que tem aqui?
 --------------
 
 The Symfony Standard Edition is configured with the following defaults:
 
   * An AppBundle you can use to start coding;
+   * Twig as the only configured template engine;    * Doctrine ORM/DBAL;    * Swiftmailer;    * Annotations enabled for everything.
 
-  * Twig as the only configured template engine;
+It comes pre-configured with the following bundles:    * **FrameworkBundle** - The core Symfony framework bundle  
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, includ        template and routing annotation capabili  
 
-  * Doctrine ORM/DBAL;
+  * [**DoctrineBundle**][7] - Adds support for the Doctrine   M
 
-  * Swiftmailer;
+  * [**TwigBundle**][8] - Adds support for the Twig templating en  ne
 
-  * Annotations enabled for everything.
+  * [**SecurityBundle**][9] - Adds security by integrating Symfony's se    ty
+    com  nent
 
-It comes pre-configured with the following bundles:
+  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a lib     for
+    sendin  emails
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+  * [**MonologBundle**][11] - Adds support for Monolog, a loggin  library
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functi    ity and
+    the web de  g toolbar
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+  * **SensioDistributionBundle** (in dev/test env) - Adds func    ality for
+    configuring and working with Symfony   stributions
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
+  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds      generation
     capabilities
 
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+  * **DebugBundle** (in dev/test env) - Adds Debug and Va    per component
     integration
 
 All libraries and bundles included in the Symfony Standard Edition are

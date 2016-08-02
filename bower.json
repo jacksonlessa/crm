@@ -1,0 +1,21 @@
+{
+  "name": "crm",
+  "homepage": "https://github.com/jacksonlessa/crm",
+  "authors": [
+    "Jackson Lessa <jacksonj.lessa@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
