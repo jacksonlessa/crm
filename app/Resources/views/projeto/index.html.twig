@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Projeto list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Description</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for projeto in projetos %}
+            <tr>
+                <td><a href="{{ path('projeto_show', { 'id': projeto.id }) }}">{{ projeto.id }}</a></td>
+                <td>{{ projeto.title }}</td>
+                <td>{{ projeto.subtitle }}</td>
+                <td>{{ projeto.description }}</td>
+                <td>{% if projeto.createdAt %}{{ projeto.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if projeto.updatedAt %}{{ projeto.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('projeto_show', { 'id': projeto.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('projeto_edit', { 'id': projeto.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projeto_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

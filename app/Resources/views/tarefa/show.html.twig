@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Tarefa</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tarefa.id }}</td>
+            </tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{ tarefa.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ tarefa.description }}</td>
+            </tr>
+            <tr>
+                <th>Estimated</th>
+                <td>{{ tarefa.estimated }}</td>
+            </tr>
+            <tr>
+                <th>Realized</th>
+                <td>{{ tarefa.realized }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if tarefa.createdAt %}{{ tarefa.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if tarefa.updatedAt %}{{ tarefa.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tarefa_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('tarefa_edit', { 'id': tarefa.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    
+    {{ dump(tarefa) }}
+{% endblock %}
