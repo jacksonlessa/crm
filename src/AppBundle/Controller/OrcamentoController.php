@@ -76,6 +76,22 @@ class OrcamentoController extends Controller
     }
 
     /**
+     * send by email a Orcamento entity.
+     *
+     * @Route("/{id}/send", name="orcamento_send")
+     * @Method("GET")
+     */
+    public function sendAction(Orcamento $orcamento)
+    {
+        
+    
+        return $this->render('orcamento/show.html.twig', array(
+            'orcamento' => $orcamento,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+    
+    /**
      * Displays a form to edit an existing Orcamento entity.
      *
      * @Route("/{id}/edit", name="orcamento_edit")
